@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>{{ article.title }}</h1>
+        <p>
+            {{ article.description }}
+        </p>
+        
+        <figure>
+            <img src="https://picsum.photos/200/300" alt="photo">
+        </figure>
+        <small class="text-muted">Date de publication : {{ article.createdAt|date("d/m/Y") }}</small>
+    </div>
+{% endblock %}
+
