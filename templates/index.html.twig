@@ -21,6 +21,7 @@
                                         <div class="btn-group">
                                             <a href="" class="btn btn-sm btn-outline-secondary">Voir</a>
                                             <a href="{{ path('article_edit', {"id": article.id}) }}" class="btn btn-sm btn-outline-secondary">Editer</a>
+                                            <a href="{{ path('article_delete', {"id": article.id}) }}" class="btn btn-sm btn-outline-secondary" onclick="return confirm('Attention ce ci va supprimer l\'article selectionnez')">Supprimer</a>
                                         </div>
                                         <small class="text-muted">{{ article.createdAt|date("d/m/Y") }}</small>
                                     </div>
