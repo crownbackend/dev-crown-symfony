@@ -11,23 +11,11 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
-     * @param ArticleRepository $articleRepository
      * @return Response
      */
-    public function home(ArticleRepository $articleRepository)
+    public function home()
     {
 
-        return $this->render('index.html.twig', [
-            "articles" => $articleRepository->findBy(["published" => 1])
-        ]);
-    }
-
-    /**
-     * @Route("/params/{name}", name="name", defaults={"name": "Patrik"},
-     *     methods={"GET"})
-     */
-    public function params(string $name)
-    {
-        return new Response("Bonjour monsieur : $name");
+        return $this->render('index.html.twig');
     }
 }

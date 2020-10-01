@@ -1,0 +1,458 @@
+/* =================================================================== 
+ * Abstract Vendor/Third Party CSS
+ * Template Ver. 2.0.0 
+ * 07-19-2020
+ * ------------------------------------------------------------------
+ *
+ * TOC:
+ * # PrismJS 
+ * # Lity
+ * # Slick Slider
+ *
+ * =================================================================== */
+
+
+
+/* ===================================================================
+ * # PrismJS 1.20.0
+ *   https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+markup-templating+php 
+ *   
+ *   okaidia theme for JavaScript, CSS and HTML
+ *   Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ *   @author ocodia
+ * ------------------------------------------------------------------- */
+
+code[class*="language-"], pre[class*="language-"] {
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-mono);
+    font-size: calc(var(--text-size) * 0.9444);
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: var(--vspace-1);
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+
+pre[class*="language-"] {
+    padding: var(--vspace-0_5) 0 var(--vspace-1);
+    margin: var(--vspace-1) 0;
+    overflow: auto;
+}
+
+:not(pre)>code[class*="language-"], pre[class*="language-"] {
+    background: #272822;
+}
+
+/* Inline code */
+
+:not(pre)>code[class*="language-"] {
+    padding: .1em;
+    white-space: normal;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #f8f8f2;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property, .token.tag, .token.constant, .token.symbol, .token.deleted {
+    color: #f92672;
+}
+
+.token.boolean, .token.number {
+    color: #ae81ff;
+}
+
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+    color: #a6e22e;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string, .token.variable {
+    color: #f8f8f2;
+}
+
+.token.atrule, .token.attr-value, .token.function, .token.class-name {
+    color: #e6db74;
+}
+
+.token.keyword {
+    color: #66d9ef;
+}
+
+.token.regex, .token.important {
+    color: #fd971f;
+}
+
+.token.important, .token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+
+
+/* ===================================================================
+ * # Lity - v2.4.0 - 2019-08-10
+ *   http://sorgalla.com/lity/
+ *   Copyright (c) 2015-2019 Jan Sorgalla; Licensed MIT 
+ * ------------------------------------------------------------------- */
+.lity {
+    z-index: 9990;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    background: #151515;
+    background: #151515;
+    outline: none !important;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.lity.lity-opened {
+    opacity: 1;
+}
+
+.lity.lity-closed {
+    opacity: 0;
+}
+
+.lity * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.lity-wrap {
+    z-index: 9990;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    outline: none !important;
+}
+
+.lity-wrap:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+.lity-loader {
+    z-index: 9991;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.8em;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.lity-loading .lity-loader {
+    opacity: 1;
+}
+
+.lity-container {
+    z-index: 9992;
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    white-space: normal;
+    max-width: 100%;
+    max-height: 100%;
+    outline: none !important;
+}
+
+.lity-content {
+    z-index: 9993;
+    width: 100%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.lity-loading .lity-content, .lity-closed .lity-content {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+.lity-content:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.lity-close {
+    z-index: 9994;
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    right: var(--vspace-0_5);
+    top: var(--vspace-0_5);
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    color: white;
+    font-style: normal;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    line-height: 42px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    border: 0;
+    background: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    border-radius: 50%;
+}
+
+.lity-close::before, .lity-close::after {
+    display: block;
+    content: "";
+    height: 20px;
+    width: 2px;
+    background-color: var(--color-gray-6);
+    position: absolute;
+    top: 11px;
+    left: 20px;
+}
+
+.lity-close::before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.lity-close::after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.lity-close::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.lity-close:hover, .lity-close:focus, .lity-close:active, .lity-close:visited {
+    text-decoration: none;
+    text-align: center;
+    padding: 0;
+    color: #fff;
+    font-style: normal;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    line-height: 36px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    border: 0;
+    background: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+.lity-close:hover::before, .lity-close:hover::after, .lity-close:focus::before, .lity-close:focus::after, .lity-close:active::before, .lity-close:active::after, .lity-close:visited::before, .lity-close:visited::after {
+    background-color: var(--color-white);
+}
+
+/* Image */
+
+.lity-image img {
+    max-width: 100%;
+    display: block;
+    line-height: 0;
+    border: 0;
+}
+
+/* iFrame */
+
+.lity-iframe .lity-container, .lity-youtube .lity-container, .lity-vimeo .lity-container, .lity-facebookvideo .lity-container, .lity-googlemaps .lity-container {
+    width: 100%;
+    max-width: 964px;
+}
+
+.lity-iframe-container {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: auto;
+    pointer-events: auto;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+}
+
+.lity-iframe-container iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+.lity-hide {
+    display: none;
+}
+
+
+
+/* ===================================================================
+ * # Slick Slider
+ * http://kenwheeler.github.io/slick/
+ * ------------------------------------------------------------------- */
+
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+    content: "";
+    display: table;
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    display: none;
+}
+
+[dir="rtl"] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
